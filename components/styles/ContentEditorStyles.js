@@ -52,7 +52,6 @@ export const styles = StyleSheet.create({
   toggleGroup: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 20,
   },
   actionRow: {
     flexDirection: 'row',
@@ -60,7 +59,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   sectionLabel: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
     color: colors.text,
     marginBottom: 8,
@@ -71,9 +70,18 @@ export const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: colors.primary,
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 8,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: colors.border,
+    shadowColor: colors.text,
+    shadowOffset: { width: 2, height: 2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 1,
+    elevation: 4,
+    marginBottom: 16,
+    width: '80%',
     alignItems: 'center',
   },
   fullWidthButton: {
@@ -83,9 +91,9 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.contrast,
   },
   buttonText: {
-    color: colors.white,
-    fontWeight: '600',
-    fontSize: 16,
+    color: colors.text,
+    fontWeight: 'bold',
+    fontSize: 14,
   },
   buttonTextActive: {
     color: colors.white,

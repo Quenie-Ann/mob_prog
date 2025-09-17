@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
   TextInput,
   TouchableOpacity,
-  Animated,
-  Platform,
   KeyboardAvoidingView,
   ScrollView,
   TouchableWithoutFeedback,
   Keyboard,
+  Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from './styles/ContentEditorStyles';
@@ -21,15 +20,6 @@ const ContentEditor = () => {
   const [color, setColor] = useState(colors.text);
   const [customText, setCustomText] = useState('');
   const [customColor, setCustomColor] = useState('');
-  const fadeAnim = useState(new Animated.Value(1))[0];
-
-  useEffect(() => {
-    Animated.timing(fadeAnim, {
-      toValue: visible ? 1 : 0,
-      duration: 300,
-      useNativeDriver: true,
-    }).start();
-  }, [visible]);
 
   const reset = () => {
     setVisible(true);
@@ -69,11 +59,9 @@ const ContentEditor = () => {
             <Text style={styles.title}>Content Editor</Text>
 
             <View style={styles.card}>
-              <Animated.View style={{ opacity: fadeAnim }}>
-                {visible && (
-                  <Text style={[styles.paragraph, { color }]}>{text}</Text>
-                )}
-              </Animated.View>
+              {visible && (
+                <Text style={[styles.paragraph, { color }]}>{text}</Text>
+              )}
 
               <View style={styles.inputGroup}>
                 <Text style={styles.label}>Custom Text</Text>
