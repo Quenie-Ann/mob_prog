@@ -3,13 +3,11 @@ import {
   View,
   Text,
   TouchableOpacity,
-  StyleSheet,
   Dimensions,
 } from 'react-native';
 import { styles } from './styles/CatchTheButtonStyles';
 import { colors } from '../styles/theme';
 import Ionicons from '@expo/vector-icons/Ionicons';
-
 
 const { width, height } = Dimensions.get('window');
 const BUTTON_SIZE = 100;
